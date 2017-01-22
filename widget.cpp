@@ -6,7 +6,6 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    ершы
     this->setFixedSize(QSize(662, 565));
     this->setWindowTitle("Snake");
 
