@@ -11,7 +11,7 @@ Snake::Snake(QObject *parent) :
     Body.push_back(QPoint(5,4));
 
 
-    timer = new QTimer();
+    timer = new QTimer(this);
     timer->setInterval(175);
 
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));
@@ -119,6 +119,7 @@ QVector <QPoint> Snake::body() const
 QPoint* Snake::head() const
 {
     //return Head;
+    return NULL; //FIXME здесь явно ошибка
 }
 
 direct Snake::direction() const
