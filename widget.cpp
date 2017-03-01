@@ -161,7 +161,7 @@ void Widget::retryGame()
 
 void Widget::gameOverSlot()
 {
-    snake.stopTimer();
+     snake.stopTimer();
      startBtn->setEnabled(false);
      stopBtn->setEnabled(true);
 }

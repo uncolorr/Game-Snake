@@ -1,0 +1,67 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.a
+*.INI
+*.ini
+*.~*
+*.obj
+*.orig
+*.pdb
+*.manifest
+*.lib
+*.ilk
+*.bak
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+
+# QT		     #
+######################
+*debug/
+*release/
+
+Makefile*
+moc_*
+ui_*
+qrc_*
+*.user
+*.user.*
+*.Debug
+*.Release
+*.autosave
+*.tds
+*.ddp
+*.qch
+*.qhc
+
+
+# other #
+#####################
+*(*
+*)*
+
+*Log/
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*

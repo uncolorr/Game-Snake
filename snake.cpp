@@ -119,6 +119,7 @@ QVector <QPoint> Snake::body() const
 QPoint* Snake::head() const
 {
     //return Head;
+    return NULL; //FIXME здесь явно ошибка
 }
 
 direct Snake::direction() const
