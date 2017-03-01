@@ -6,6 +6,9 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
+
+    grabKeyboard();
+
     this->setFixedSize(QSize(662, 565));
     this->setWindowTitle("Snake");
 
@@ -76,6 +79,7 @@ Widget::Widget(QWidget *parent) :
 
 Widget::~Widget()
 {
+    releaseKeyboard();
     delete ui;
 }
 
@@ -171,6 +175,7 @@ void Widget::keyPressEvent(QKeyEvent *pe)
     switch (pe->key())
     {
     case Qt::Key_W:
+    case Qt::Key_Up:
         qDebug() << "Press W";
         if(abs(snake.direction() - Up) != 2 && snake.direction() != Up)
         {
@@ -178,6 +183,7 @@ void Widget::keyPressEvent(QKeyEvent *pe)
         }
         break;
     case Qt::Key_A:
+    case Qt::Key_Left:
         qDebug() << "Press A";
         if(abs(snake.direction() - Left) != 2 && snake.direction() != Left)
         {
@@ -185,6 +191,7 @@ void Widget::keyPressEvent(QKeyEvent *pe)
         }
         break;
     case Qt::Key_S:
+    case Qt::Key_Down:
         qDebug() << "Press S";
         if(abs(snake.direction() - Down) != 2 && snake.direction() != Down)
         {
@@ -192,6 +199,7 @@ void Widget::keyPressEvent(QKeyEvent *pe)
         }
         break;
     case Qt::Key_D:
+    case Qt::Key_Right:
         qDebug() << "Press D";
         if(abs(snake.direction() - Right) != 2 && snake.direction() != Right)
         {
